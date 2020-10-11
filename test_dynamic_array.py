@@ -22,40 +22,40 @@ class TestDynamicArray(unittest.TestCase):
         except NameError:
             self.fail("Could not instantiate DynamicArray.")
 
-    # def test_default_initial_capacity(self):
-    #     """
-    #     The default initial capacity is ten.
-    #     """
-    #     a = DynamicArray()
-    #     self.assertEqual(10, a.capacity)
+    def test_default_initial_capacity(self):
+        """
+        The default initial capacity is ten.
+        """
+        a = DynamicArray()
+        self.assertEqual(10, a.capacity)
 
-    # def test_initially_empty(self):
-    #     """
-    #     A dynamic array is initially empty.
-    #     """
-    #     a = DynamicArray()
-    #     self.assertTrue(a.is_empty())
+    def test_initially_empty(self):
+        """
+        A dynamic array is initially empty.
+        """
+        a = DynamicArray()
+        self.assertTrue(a.is_empty())
 
-    # def test_initial_length(self):
-    #     """
-    #     A dynamic array has an initial length of 0.
-    #     """
-    #     a = DynamicArray()
-    #     self.assertEqual(0, len(a))
+    def test_initial_length(self):
+        """
+        A dynamic array has an initial length of 0.
+        """
+        a = DynamicArray()
+        self.assertEqual(0, len(a))
 
 
     # """
     # Appending and retrieving one value
     # """
 
-    # # Hint: Do the naive thing.
-    # def test_append_one_value_to_empty(self):
-    #     """
-    #     A single value can be appended to and retrieved from a dynamic array.
-    #     """
-    #     a = DynamicArray()
-    #     a.append(42)
-    #     self.assertEqual(42, a[0])
+    # Hint: Do the naive thing.
+    def test_append_one_value_to_empty(self):
+        """
+        A single value can be appended to and retrieved from a dynamic array.
+        """
+        a = DynamicArray()
+        a.append(42)
+        self.assertEqual(42, a[0])
 
     # """
     # Appending and retrieving two values
