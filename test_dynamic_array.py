@@ -101,9 +101,9 @@ class TestDynamicArray(unittest.TestCase):
         a = DynamicArray()
         self.assertEqual(len(a.data), a.capacity)
 
-    # """
-    # Guiding appending and retrieving one value.
-    # """
+    """
+    Guiding appending and retrieving one value.
+    """
 
     def test_append_first_value_to_internal_data(self):
         """
@@ -193,17 +193,17 @@ class TestDynamicArray(unittest.TestCase):
         a.append('FAKE')
         self.assertFalse(a.is_empty())
 
-    # def test_clear(self):
-    #     """
-    #     A cleared dynamic array is empty and has a length of 0.
-    #     """
-    #     a = DynamicArray()
-    #     a.append('FAKE')
-    #     a.append('FAKE')
-    #     self.assertFalse(a.is_empty())
-    #     a.clear()
-    #     self.assertTrue(a.is_empty())
-    #     self.assertEqual(0, len(a))
+    def test_clear(self):
+        """
+        A cleared dynamic array is empty and has a length of 0.
+        """
+        a = DynamicArray()
+        a.append('FAKE')
+        a.append('FAKE')
+        self.assertFalse(a.is_empty())
+        a.clear()
+        self.assertTrue(a.is_empty())
+        self.assertEqual(0, len(a))
 
     # def test_len(self):
     #     """
