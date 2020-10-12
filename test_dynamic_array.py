@@ -105,14 +105,14 @@ class TestDynamicArray(unittest.TestCase):
     # Guiding appending and retrieving one value.
     # """
 
-    # def test_append_first_value_to_internal_data(self):
-    #     """
-    #     Appending the first value in an empty DynamicArray puts it in the right
-    #     location in the internal data array.
-    #     """
-    #     a = DynamicArray()
-    #     a.append(99)
-    #     self.assertEqual(99, a.data[0])
+    def test_append_first_value_to_internal_data(self):
+        """
+        Appending the first value in an empty DynamicArray puts it in the right
+        location in the internal data array.
+        """
+        a = DynamicArray()
+        a.append(99)
+        self.assertEqual(99, a.data[0])
 
     # def test_retrieve_first_appended_value(self):
     #     """
