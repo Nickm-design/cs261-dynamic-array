@@ -8,7 +8,8 @@ class DynamicArray:
         self.capacity = 10
         self.size = 0
         self.n = 0
-        self.array = np.ndarray(self.size, 'i')
+        self.data = np.ndarray(self.size, 'i')
+
 
     def is_empty(self):
         return self.size == 0
@@ -18,7 +19,7 @@ class DynamicArray:
 
     def append(self, num):
         self.n += 1
-        self.array = np.append(self.array, num)
+        self.data = np.append(self.data, num)
 
     def __getitem__(self, number):
-        return self.array[number]
+        return self.data[number]
