@@ -154,17 +154,17 @@ class TestDynamicArray(unittest.TestCase):
         self.assertEqual('foo', a.data[0])
         self.assertEqual('bar', a.data[1])
 
-    # # This is a copy of the same test from way up above. If this passes, uncomment
-    # # the other uncommented test. If this is confusing, just ignore this comment.
-    # def test_append_two_values_again(self):
-    #     """
-    #     Two values can be appended to and retrieved from a dynamic array.
-    #     """
-    #     a = DynamicArray()
-    #     a.append(8)
-    #     a.append(6)
-    #     self.assertEqual(8, a[0])
-    #     self.assertEqual(6, a[1])
+    # This is a copy of the same test from way up above. If this passes, uncomment
+    # the other uncommented test. If this is confusing, just ignore this comment.
+    def test_append_two_values_again(self):
+        """
+        Two values can be appended to and retrieved from a dynamic array.
+        """
+        a = DynamicArray()
+        a.append(8)
+        a.append(6)
+        self.assertEqual(8, a[0])
+        self.assertEqual(6, a[1])
 
     # def test_append_four_values(self):
     #     """
