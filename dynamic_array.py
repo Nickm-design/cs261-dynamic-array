@@ -17,7 +17,7 @@ class DynamicArray:
         return self.n
 
     def append(self, num):
-        self.data[self.n] = num
+        self.data[self.next_index] = num
         self.next_index += 1
 
     def __getitem__(self, number):
