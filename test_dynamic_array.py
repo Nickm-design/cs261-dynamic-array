@@ -93,13 +93,13 @@ class TestDynamicArray(unittest.TestCase):
         a = DynamicArray()
         self.assertEqual('O', a.data.dtype)
 
-    # def test_data_size(self):
-    #     """
-    #     Length of the data array is the same as the DynamicArray capacity.
-    #     """
-    #     import numpy as np # Hint: Get an error? Just `pip3 install numpy`
-    #     a = DynamicArray()
-    #     self.assertEqual(len(a.data), a.capacity)
+    def test_data_size(self):
+        """
+        Length of the data array is the same as the DynamicArray capacity.
+        """
+        import numpy as np # Hint: Get an error? Just `pip3 install numpy`
+        a = DynamicArray()
+        self.assertEqual(len(a.data), a.capacity)
 
     # """
     # Guiding appending and retrieving one value.
