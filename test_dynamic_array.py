@@ -114,15 +114,15 @@ class TestDynamicArray(unittest.TestCase):
         a.append(99)
         self.assertEqual(99, a.data[0])
 
-    # def test_retrieve_first_appended_value(self):
-    #     """
-    #     The first element appended to the DynamicArray is can be retrieved with
-    #     index 0.
-    #     """
-    #     a = DynamicArray()
-    #     a.append(100)
-    #     self.assertEqual(a[0], a.data[0])
-    #     self.assertEqual(100, a[0])
+    def test_retrieve_first_appended_value(self):
+        """
+        The first element appended to the DynamicArray is can be retrieved with
+        index 0.
+        """
+        a = DynamicArray()
+        a.append(100)
+        self.assertEqual(a[0], a.data[0])
+        self.assertEqual(100, a[0])
 
     # """
     # Guiding appending and retrieving two values.
