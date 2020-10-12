@@ -124,16 +124,16 @@ class TestDynamicArray(unittest.TestCase):
         self.assertEqual(a[0], a.data[0])
         self.assertEqual(100, a[0])
 
-    # """
-    # Guiding appending and retrieving two values.
-    # """
+    """
+    Guiding appending and retrieving two values.
+    """
 
-    # def test_next_index(self):
-    #     """
-    #     Has a next_index property, which is initially 0.
-    #     """
-    #     a = DynamicArray()
-    #     self.assertEqual(0, a.next_index)
+    def test_next_index(self):
+        """
+        Has a next_index property, which is initially 0.
+        """
+        a = DynamicArray()
+        self.assertEqual(0, a.next_index)
 
     # def test_next_index(self):
     #     """
