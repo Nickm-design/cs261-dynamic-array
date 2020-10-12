@@ -14,7 +14,7 @@ class DynamicArray:
         return self.next_index == 0
 
     def __len__(self):
-        return self.n
+        return self.next_index
 
     def append(self, ele):
         self.data[self.next_index] = ele
@@ -25,7 +25,6 @@ class DynamicArray:
             self.data[self.next_index] = 0
         self.next_index = 0
             
-        
     def __getitem__(self, number):
         return self.data[number]
 
