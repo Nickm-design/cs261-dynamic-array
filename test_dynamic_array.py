@@ -85,13 +85,13 @@ class TestDynamicArray(unittest.TestCase):
         a = DynamicArray()
         self.assertEqual(np.ndarray, type(a.data))
 
-    # def test_data_object_references(self):
-    #     """
-    #     Internal data array stores object references.
-    #     """
-    #     import numpy as np # Hint: Get an error? Just `pip3 install numpy`
-    #     a = DynamicArray()
-    #     self.assertEqual('O', a.data.dtype)
+    def test_data_object_references(self):
+        """
+        Internal data array stores object references.
+        """
+        import numpy as np # Hint: Get an error? Just `pip3 install numpy`
+        a = DynamicArray()
+        self.assertEqual('O', a.data.dtype)
 
     # def test_data_size(self):
     #     """

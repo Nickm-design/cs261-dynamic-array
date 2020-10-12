@@ -8,7 +8,7 @@ class DynamicArray:
         self.capacity = 10
         self.size = 0
         self.n = 0
-        self.data = np.ndarray(self.size, 'i')
+        self.data = np.ndarray(self.size, 'O')
 
 
     def is_empty(self):
