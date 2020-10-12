@@ -143,16 +143,16 @@ class TestDynamicArray(unittest.TestCase):
         a.append('FAKE')
         self.assertEqual(1, a.next_index)
 
-    def test_appending_two_values_internal(self):
-        """
-        Appending two values stores them in the first and second positions in
-        the internal data array.
-        """
-        a = DynamicArray()
-        a.append('foo')
-        a.append('bar')
-        self.assertEqual('foo', a.data[0])
-        self.assertEqual('bar', a.data[1])
+    # def test_appending_two_values_internal(self):
+    #     """
+    #     Appending two values stores them in the first and second positions in
+    #     the internal data array.
+    #     """
+    #     a = DynamicArray()
+    #     a.append('foo')
+    #     a.append('bar')
+    #     self.assertEqual('foo', a.data[0])
+    #     self.assertEqual('bar', a.data[1])
 
     # This is a copy of the same test from way up above. If this passes, uncomment
     # the other uncommented test. If this is confusing, just ignore this comment.
@@ -166,19 +166,19 @@ class TestDynamicArray(unittest.TestCase):
         self.assertEqual(8, a[0])
         self.assertEqual(6, a[1])
 
-    # def test_append_four_values(self):
-    #     """
-    #     Three values can be appended to and retrieved from a dynamic array.
-    #     """
-    #     a = DynamicArray()
-    #     a.append('fee')
-    #     a.append('fi')
-    #     a.append('fo')
-    #     a.append('funk')
-    #     self.assertEqual('fee', a[0])
-    #     self.assertEqual('fi', a[1])
-    #     self.assertEqual('fo', a[2])
-    #     self.assertEqual('funk', a[3])
+    def test_append_four_values(self):
+        """
+        Three values can be appended to and retrieved from a dynamic array.
+        """
+        a = DynamicArray()
+        a.append('fee')
+        a.append('fi')
+        a.append('fo')
+        a.append('funk')
+        self.assertEqual('fee', a[0])
+        self.assertEqual('fi', a[1])
+        self.assertEqual('fo', a[2])
+        self.assertEqual('funk', a[3])
 
     # """
     # Emptiness, len and clearing
