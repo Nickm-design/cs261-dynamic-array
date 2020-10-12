@@ -135,13 +135,13 @@ class TestDynamicArray(unittest.TestCase):
         a = DynamicArray()
         self.assertEqual(0, a.next_index)
 
-    # def test_next_index(self):
-    #     """
-    #     After appending the first value, next_index becomes 1.
-    #     """
-    #     a = DynamicArray()
-    #     a.append('FAKE')
-    #     self.assertEqual(1, a.next_index)
+    def test_next_index(self):
+        """
+        After appending the first value, next_index becomes 1.
+        """
+        a = DynamicArray()
+        a.append('FAKE')
+        self.assertEqual(1, a.next_index)
 
     # def test_appending_two_values_internal(self):
     #     """
