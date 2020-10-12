@@ -11,7 +11,7 @@ class DynamicArray:
         self.next_index = 0
 
     def is_empty(self):
-        return self.n == 0
+        return self.next_index == 0
 
     def __len__(self):
         return self.n
