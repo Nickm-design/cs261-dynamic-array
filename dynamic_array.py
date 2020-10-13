@@ -6,9 +6,8 @@ class DynamicArray:
     
     def __init__(self):
         self.capacity = 10
-        self.n = 0
-        self.data = np.ndarray(self.capacity, 'O')
         self.next_index = 0
+        self.data = np.ndarray(self.capacity, 'O')
 
     def is_empty(self):
         return self.next_index == 0
@@ -25,7 +24,10 @@ class DynamicArray:
             self.data[self.next_index] = 0
         self.next_index = 0
             
-    def __getitem__(self, number):
-        return self.data[number]
+    def __getitem__(self, ele):
+        if ele < 0:
+            raise IndexError()
 
+        return self.data[ele]
+       
     
