@@ -25,7 +25,7 @@ class DynamicArray:
         self.next_index = 0
             
     def __getitem__(self, ele):
-        if ele < 0:
+        if ele < 0 or ele >= self.next_index:
             raise IndexError()
 
         return self.data[ele]

@@ -229,16 +229,16 @@ class TestDynamicArray(unittest.TestCase):
         except IndexError:
             pass
 
-    # def test_large_index(self):
-    #     """
-    #     Accessing with an index greater than or equal to the last index raises an IndexError
-    #     """
-    #     a = DynamicArray()
-    #     try:
-    #         a[0]
-    #         self.fail("Did not raise IndexError: index out of range.")
-    #     except IndexError:
-    #         pass
+    def test_large_index(self):
+        """
+        Accessing with an index greater than or equal to the last index raises an IndexError
+        """
+        a = DynamicArray()
+        try:
+            a[0]
+            self.fail("Did not raise IndexError: index out of range.")
+        except IndexError:
+            pass
 
     # """
     # Removing elements from the end
