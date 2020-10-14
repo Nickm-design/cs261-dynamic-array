@@ -292,7 +292,7 @@ class TestDynamicArray(unittest.TestCase):
         a.append('fi')
         a.append('fo')
         try:
-            a.delete(3)
+            # a.delete(3)
             a.delete(-1)
             self.fail("Did not raise IndexError: index out of range.")
         except IndexError:
@@ -311,18 +311,18 @@ class TestDynamicArray(unittest.TestCase):
         self.assertEqual('fi', a[0])
         self.assertEqual('fo', a[1])
 
-    # def test_delete_middle(self):
-    #     """
-    #     Deleting from the middle shifts remaining elements to the left.
-    #     """
-    #     a = DynamicArray()
-    #     a.append('fee')
-    #     a.append('fi')
-    #     a.append('fo')
-    #     a.delete(1)
-    #     self.assertEqual(2, len(a))
-    #     self.assertEqual('fee', a[0])
-    #     self.assertEqual('fo', a[1])
+    def test_delete_middle(self):
+        """
+        Deleting from the middle shifts remaining elements to the left.
+        """
+        a = DynamicArray()
+        a.append('fee')
+        a.append('fi')
+        a.append('fo')
+        a.delete(1)
+        self.assertEqual(2, len(a))
+        self.assertEqual('fee', a[0])
+        self.assertEqual('fo', a[1])
 
     # def test_delete_empty(self):
     #     """

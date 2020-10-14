@@ -39,12 +39,10 @@ class DynamicArray:
     
     def delete(self, ele):
         if ele == 0:
-            # print(self.data)
             self.data = np.delete(self.data, [ele])
             self.next_index -= 1
-            # print(self.data)
-        elif ele > 0 or ele >= self.next_index:
-            self.data = np.delete(self.data, [ele+1])
+        if ele > 0 or ele >= self.next_index:
+            self.data = np.delete(self.data, [ele])
             self.next_index -= 1
-        elif ele < 0:
+        if ele < 0:
             raise IndexError()
