@@ -12,6 +12,8 @@ class DynamicArray:
     def is_full(self):
         if self.next_index < self.capacity:
             return self.next_index == self.capacity
+        elif self.next_index >= self.capacity:
+            return self.next_index >= self.capacity
 
     def is_empty(self):
         return self.next_index == 0
