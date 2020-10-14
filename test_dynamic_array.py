@@ -57,9 +57,9 @@ class TestDynamicArray(unittest.TestCase):
         a.append(42)
         self.assertEqual(42, a[0])
 
-    # """
-    # Appending and retrieving two values
-    # """
+    """
+    Appending and retrieving two values
+    """
 
     # # Tip: If you haven't gotten this to pass within two minutes, comment it out
     # # and move on.
@@ -73,9 +73,9 @@ class TestDynamicArray(unittest.TestCase):
     #     self.assertEqual(8, a[0])
     #     self.assertEqual(6, a[1])
 
-    # """
-    # Guiding internal data storage, with a static array
-    # """
+    """
+    Guiding internal data storage, with a static array
+    """
 
     def test_data_property(self):
         """
@@ -240,21 +240,21 @@ class TestDynamicArray(unittest.TestCase):
         except IndexError:
             pass
 
-    # """
-    # Removing elements from the end
-    # """
+    """
+    Removing elements from the end
+    """
 
-    # def test_pop(self):
-    #     """
-    #     Popping removes and returns the last element
-    #     """
-    #     a = DynamicArray()
-    #     a.append('fee')
-    #     a.append('fi')
-    #     a.append('fo')
-    #     last_element = a.pop()
-    #     self.assertEqual('fo', last_element)
-    #     self.assertEqual(2, len(a))
+    def test_pop(self):
+        """
+        Popping removes and returns the last element
+        """
+        a = DynamicArray()
+        a.append('fee')
+        a.append('fi')
+        a.append('fo')
+        last_element = a.pop()
+        self.assertEqual('fo', last_element)
+        self.assertEqual(2, len(a))
 
     # def test_pop_empty(self):
     #     """

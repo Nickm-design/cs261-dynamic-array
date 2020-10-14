@@ -27,7 +27,18 @@ class DynamicArray:
     def __getitem__(self, ele):
         if ele < 0 or ele >= self.next_index:
             raise IndexError()
-
         return self.data[ele]
        
-    
+    def pop(self):
+        lastEle = self.data[self.next_index-1]
+        self.data = np.delete(self.data, [self.next_index-1])
+        self.next_index -= 1
+        return lastEle
+        
+        
+# a = DynamicArray()
+# a.append('fee')
+# a.append('fi')
+# a.append('fo')
+# last_element = a.pop()
+        
