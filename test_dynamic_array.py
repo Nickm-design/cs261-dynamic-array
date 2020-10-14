@@ -352,20 +352,20 @@ class TestDynamicArray(unittest.TestCase):
         self.assertEqual('fo', a[2])
         self.assertEqual('funk', a[3])
 
-    # def test_insert_invalid_index(self):
-    #     """
-    #     Inserting an out of bounds index raises an IndexError: index out of range.
-    #     """
-    #     a = DynamicArray()
-    #     a.append('fee')
-    #     a.append('fi')
-    #     a.append('fo')
-    #     try:
-    #         a.insert(4, 'this is more than the next available index')
-    #         a.insert(-1, 'this is less than the first index')
-    #         self.fail("Did not raise IndexError: index out of range.")
-    #     except IndexError:
-    #         pass
+    def test_insert_invalid_index(self):
+        """
+        Inserting an out of bounds index raises an IndexError: index out of range.
+        """
+        a = DynamicArray()
+        a.append('fee')
+        a.append('fi')
+        a.append('fo')
+        try:
+            a.insert(4, 'this is more than the next available index')
+            a.insert(-1, 'this is less than the first index')
+            self.fail("Did not raise IndexError: index out of range.")
+        except IndexError:
+            pass
 
     # def test_insert_first(self):
     #     """

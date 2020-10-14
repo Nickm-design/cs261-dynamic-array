@@ -44,9 +44,11 @@ class DynamicArray:
             self.data[self.next_index] = 0
         self.next_index = 0
 
-    def insert(self, ele, type):
+    def insert(self, idx, ele):
+        if idx < 0 or idx > self.next_index:
+            raise IndexError()
         self.next_index += 1
-        self.data = np.insert(self.data, ele, type)
+        self.data = np.insert(self.data, idx, ele)
             
     def __getitem__(self, ele):
         if ele < 0 or ele >= self.next_index:
