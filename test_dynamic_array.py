@@ -477,20 +477,20 @@ class TestDynamicArray(unittest.TestCase):
         self.assertEqual('fake9', a[10])
 
 
-    # """
-    # Max, min, and sum
-    # """
+    """
+    Max, min, and sum
+    """
 
-    # def test_max(self):
-    #     """
-    #     Max method returns the largest value in the dynamic array.
-    #     """
-    #     a = DynamicArray()
-    #     for _ in range(0, 9):
-    #         a.append(random.randint(0, 100))
-    #     largest_value = random.randint(101, 150)
-    #     a.insert(random.randint(0, 9), largest_value)
-    #     self.assertEqual(largest_value, a.max())
+    def test_max(self):
+        """
+        Max method returns the largest value in the dynamic array.
+        """
+        a = DynamicArray()
+        for _ in range(0, 9):
+            a.append(random.randint(0, 100))
+        largest_value = random.randint(101, 150)
+        a.insert(random.randint(0, 9), largest_value)
+        self.assertEqual(largest_value, a.max())
 
     # def test_min(self):
     #     """

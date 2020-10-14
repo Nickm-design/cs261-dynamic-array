@@ -2,6 +2,7 @@
 # Your implementation should pass the tests in test_dynamic_array.py.
 # Nick Morris
 import numpy as np
+import random
 class DynamicArray:
     
     def __init__(self):
@@ -67,4 +68,10 @@ class DynamicArray:
         if ele < 0 or ele >= self.next_index:
             raise IndexError()
         return self.data[ele]
-    
+
+    def max(self):
+        max_ele = self.data[0]
+        for idx in self.data:
+            if self.data[idx] > max_ele:
+                max_ele = self.data[idx] 
+            return max_ele
