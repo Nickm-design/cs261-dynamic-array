@@ -9,6 +9,9 @@ class DynamicArray:
         self.next_index = 0
         self.data = np.ndarray(self.capacity, 'O')
 
+    def is_full(self):
+        return self.next_index == self.capacity
+
     def is_empty(self):
         return self.next_index == 0
 

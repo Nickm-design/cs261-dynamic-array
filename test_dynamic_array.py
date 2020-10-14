@@ -406,16 +406,16 @@ class TestDynamicArray(unittest.TestCase):
         self.assertEqual(1, len(a))
         self.assertEqual('foo', a[0])
 
-    # """
-    # Fullness
-    # """
+    """
+    Fullness
+    """
 
-    # def test_empty_not_full(self):
-    #     """
-    #     An empty dynamic array is not full.
-    #     """
-    #     a = DynamicArray()
-    #     self.assertFalse(a.is_full())
+    def test_empty_not_full(self):
+        """
+        An empty dynamic array is not full.
+        """
+        a = DynamicArray()
+        self.assertFalse(a.is_full())
 
     # def test_less_than_capacity(self):
     #     """
