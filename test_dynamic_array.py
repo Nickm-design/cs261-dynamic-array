@@ -335,22 +335,22 @@ class TestDynamicArray(unittest.TestCase):
         except IndexError:
             pass
 
-    # """
-    # Basic insertion
-    # """
+    """
+    Basic insertion
+    """
 
-    # def test_insert_end(self):
-    #     """
-    #     Inserting after the last element adds the element to the end of the array.
-    #     """
-    #     a = DynamicArray()
-    #     a.append('fee')
-    #     a.append('fi')
-    #     a.append('fo')
-    #     a.insert(3, 'funk')
-    #     self.assertEqual(4, len(a))
-    #     self.assertEqual('fo', a[2])
-    #     self.assertEqual('funk', a[3])
+    def test_insert_end(self):
+        """
+        Inserting after the last element adds the element to the end of the array.
+        """
+        a = DynamicArray()
+        a.append('fee')
+        a.append('fi')
+        a.append('fo')
+        a.insert(3, 'funk')
+        self.assertEqual(4, len(a))
+        self.assertEqual('fo', a[2])
+        self.assertEqual('funk', a[3])
 
     # def test_insert_invalid_index(self):
     #     """
