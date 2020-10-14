@@ -397,14 +397,14 @@ class TestDynamicArray(unittest.TestCase):
         self.assertEqual('fi', a[2])
         self.assertEqual('fo', a[3])
 
-    # def test_insert_empty(self):
-    #     """
-    #     Inserting into an empty array at position 0 is ok.
-    #     """
-    #     a = DynamicArray()
-    #     a.insert(0, 'foo')
-    #     self.assertEqual(1, len(a))
-    #     self.assertEqual('foo', a[0])
+    def test_insert_empty(self):
+        """
+        Inserting into an empty array at position 0 is ok.
+        """
+        a = DynamicArray()
+        a.insert(0, 'foo')
+        self.assertEqual(1, len(a))
+        self.assertEqual('foo', a[0])
 
     # """
     # Fullness
