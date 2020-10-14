@@ -256,16 +256,16 @@ class TestDynamicArray(unittest.TestCase):
         self.assertEqual('fo', last_element)
         self.assertEqual(2, len(a))
 
-    # def test_pop_empty(self):
-    #     """
-    #     Popping from an empty list raises an IndexError: pop from empty array
-    #     """
-    #     a = DynamicArray()
-    #     try:
-    #         a.pop()
-    #         self.fail("Did not raise IndexError: index out of range.")
-    #     except IndexError:
-    #         pass
+    def test_pop_empty(self):
+        """
+        Popping from an empty list raises an IndexError: pop from empty array
+        """
+        a = DynamicArray()
+        try:
+            a.pop()
+            self.fail("Did not raise IndexError: index out of range.")
+        except IndexError:
+            pass
 
     # """
     # Deleting

@@ -30,6 +30,8 @@ class DynamicArray:
         return self.data[ele]
        
     def pop(self):
+        if self.next_index -1 < 0:
+            raise IndexError()
         lastEle = self.data[self.next_index-1]
         self.data = np.delete(self.data, [self.next_index-1])
         self.next_index -= 1
