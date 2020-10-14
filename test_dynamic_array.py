@@ -382,20 +382,20 @@ class TestDynamicArray(unittest.TestCase):
         self.assertEqual('fi', a[2])
         self.assertEqual('fo', a[3])
 
-    # def test_insert_middle(self):
-    #     """
-    #     Inserting into the middle shifts elements to the right, to the right.
-    #     """
-    #     a = DynamicArray()
-    #     a.append('fee')
-    #     a.append('fi')
-    #     a.append('fo')
-    #     a.insert(1, 'foo')
-    #     self.assertEqual(4, len(a))
-    #     self.assertEqual('fee', a[0])
-    #     self.assertEqual('foo', a[1])
-    #     self.assertEqual('fi', a[2])
-    #     self.assertEqual('fo', a[3])
+    def test_insert_middle(self):
+        """
+        Inserting into the middle shifts elements to the right, to the right.
+        """
+        a = DynamicArray()
+        a.append('fee')
+        a.append('fi')
+        a.append('fo')
+        a.insert(1, 'foo')
+        self.assertEqual(4, len(a))
+        self.assertEqual('fee', a[0])
+        self.assertEqual('foo', a[1])
+        self.assertEqual('fi', a[2])
+        self.assertEqual('fo', a[3])
 
     # def test_insert_empty(self):
     #     """
