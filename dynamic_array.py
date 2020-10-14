@@ -38,14 +38,13 @@ class DynamicArray:
         return lastEle
     
     def delete(self, ele):
-        if ele < 0:
+        if ele == 0:
+            # print(self.data)
+            self.data = np.delete(self.data, [ele])
+            self.next_index -= 1
+            # print(self.data)
+        elif ele > 0 or ele >= self.next_index:
+            self.data = np.delete(self.data, [ele+1])
+            self.next_index -= 1
+        elif ele < 0:
             raise IndexError()
-        self.data = np.delete(self.data, [ele+1])
-        self.next_index -= 1
-        
-# a = DynamicArray()
-# a.append('fee')
-# a.append('fi')
-# a.append('fo')
-# last_element = a.pop()
-        

@@ -298,18 +298,18 @@ class TestDynamicArray(unittest.TestCase):
         except IndexError:
             pass
 
-    # def test_delete_first(self):
-    #     """
-    #     Deleting the first element shifts remaining elements to the left.
-    #     """
-    #     a = DynamicArray()
-    #     a.append('fee')
-    #     a.append('fi')
-    #     a.append('fo')
-    #     a.delete(0)
-    #     self.assertEqual(2, len(a))
-    #     self.assertEqual('fi', a[0])
-    #     self.assertEqual('fo', a[1])
+    def test_delete_first(self):
+        """
+        Deleting the first element shifts remaining elements to the left.
+        """
+        a = DynamicArray()
+        a.append('fee')
+        a.append('fi')
+        a.append('fo')
+        a.delete(0)
+        self.assertEqual(2, len(a))
+        self.assertEqual('fi', a[0])
+        self.assertEqual('fo', a[1])
 
     # def test_delete_middle(self):
     #     """
