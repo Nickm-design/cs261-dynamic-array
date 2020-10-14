@@ -324,16 +324,16 @@ class TestDynamicArray(unittest.TestCase):
         self.assertEqual('fee', a[0])
         self.assertEqual('fo', a[1])
 
-    # def test_delete_empty(self):
-    #     """
-    #     Deleting from an empty array raises an IndexError: index out of range
-    #     """
-    #     a = DynamicArray()
-    #     try:
-    #         a.delete(0)
-    #         self.fail("Did not raise IndexError: index out of range.")
-    #     except IndexError:
-    #         pass
+    def test_delete_empty(self):
+        """
+        Deleting from an empty array raises an IndexError: index out of range
+        """
+        a = DynamicArray()
+        try:
+            a.delete(0)
+            self.fail("Did not raise IndexError: index out of range.")
+        except IndexError:
+            pass
 
     # """
     # Basic insertion
