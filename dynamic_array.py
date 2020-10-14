@@ -22,6 +22,9 @@ class DynamicArray:
         return self.next_index
 
     def append(self, ele):
+        if self.next_index == self.capacity:
+            self.capacity *= 2
+            self.data = np.ndarray(self.capacity, 'O')
         self.data[self.next_index] = ele
         self.next_index += 1
 
