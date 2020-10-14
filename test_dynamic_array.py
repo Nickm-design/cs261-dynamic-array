@@ -417,15 +417,15 @@ class TestDynamicArray(unittest.TestCase):
         a = DynamicArray()
         self.assertFalse(a.is_full())
 
-    # def test_less_than_capacity(self):
-    #     """
-    #     A dynamic array with a number of elements less than capacityis not full.
-    #     """
-    #     a = DynamicArray()
-    #     a.append('fee')
-    #     a.append('fi')
-    #     self.assertTrue(len(a) < a.capacity)
-    #     self.assertFalse(a.is_full())
+    def test_less_than_capacity(self):
+        """
+        A dynamic array with a number of elements less than capacityis not full.
+        """
+        a = DynamicArray()
+        a.append('fee')
+        a.append('fi')
+        self.assertTrue(len(a) < a.capacity)
+        self.assertFalse(a.is_full())
 
     # def test_full(self):
     #     """

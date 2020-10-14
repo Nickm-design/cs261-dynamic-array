@@ -10,7 +10,8 @@ class DynamicArray:
         self.data = np.ndarray(self.capacity, 'O')
 
     def is_full(self):
-        return self.next_index == self.capacity
+        if self.next_index < self.capacity:
+            return self.next_index == self.capacity
 
     def is_empty(self):
         return self.next_index == 0
@@ -61,11 +62,4 @@ class DynamicArray:
         if ele < 0 or ele >= self.next_index:
             raise IndexError()
         return self.data[ele]
-
-# a = DynamicArray()
-# a.append('fee')
-# a.append('fi')
-# a.append('fo')
-# a.insert(1, 'foo')   
-
     
