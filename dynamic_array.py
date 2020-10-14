@@ -36,7 +36,10 @@ class DynamicArray:
         self.data = np.delete(self.data, [self.next_index-1])
         self.next_index -= 1
         return lastEle
-        
+    
+    def delete(self, ele):
+        self.data = np.delete(self.data, [ele+1])
+        self.next_index -= 1
         
 # a = DynamicArray()
 # a.append('fee')

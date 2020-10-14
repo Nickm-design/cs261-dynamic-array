@@ -267,21 +267,21 @@ class TestDynamicArray(unittest.TestCase):
         except IndexError:
             pass
 
-    # """
-    # Deleting
-    # """
+    """
+    Deleting
+    """
 
-    # def test_delete_last(self):
-    #     """
-    #     Deleting the last element removes it from the dynamic array.
-    #     """
-    #     a = DynamicArray()
-    #     a.append('fee')
-    #     a.append('fi')
-    #     a.append('fo')
-    #     a.delete(2)
-    #     self.assertEqual(2, len(a))
-    #     self.assertEqual('fi', a.pop())
+    def test_delete_last(self):
+        """
+        Deleting the last element removes it from the dynamic array.
+        """
+        a = DynamicArray()
+        a.append('fee')
+        a.append('fi')
+        a.append('fo')
+        a.delete(2)
+        self.assertEqual(2, len(a))
+        self.assertEqual('fi', a.pop())
 
     # def test_delete_invalid_index(self):
     #     """
