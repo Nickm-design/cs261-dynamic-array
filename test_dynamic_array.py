@@ -367,20 +367,20 @@ class TestDynamicArray(unittest.TestCase):
         except IndexError:
             pass
 
-    # def test_insert_first(self):
-    #     """
-    #     Inserting a new first element shifts remaining elements to the right.
-    #     """
-    #     a = DynamicArray()
-    #     a.append('fee')
-    #     a.append('fi')
-    #     a.append('fo')
-    #     a.insert(0, 'foo')
-    #     self.assertEqual(4, len(a))
-    #     self.assertEqual('foo', a[0])
-    #     self.assertEqual('fee', a[1])
-    #     self.assertEqual('fi', a[2])
-    #     self.assertEqual('fo', a[3])
+    def test_insert_first(self):
+        """
+        Inserting a new first element shifts remaining elements to the right.
+        """
+        a = DynamicArray()
+        a.append('fee')
+        a.append('fi')
+        a.append('fo')
+        a.insert(0, 'foo')
+        self.assertEqual(4, len(a))
+        self.assertEqual('foo', a[0])
+        self.assertEqual('fee', a[1])
+        self.assertEqual('fi', a[2])
+        self.assertEqual('fo', a[3])
 
     # def test_insert_middle(self):
     #     """
