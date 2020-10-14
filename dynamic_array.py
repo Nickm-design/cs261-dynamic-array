@@ -38,6 +38,8 @@ class DynamicArray:
         return lastEle
     
     def delete(self, ele):
+        if ele < 0:
+            raise IndexError()
         self.data = np.delete(self.data, [ele+1])
         self.next_index -= 1
         
